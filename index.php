@@ -2,31 +2,38 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8" />
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Создание, разработка сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?> и интернет магазинов на базе 1C Битрикс, bitrix, цена, стоимость.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Заказать создание сайта на Битрикс, разработку дизайна любой сложности в соответствии с пожеланиями клиента, поисковое продвижение, техническую поддержку сайта<?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?> или просто перенос сайта на битрикс по приемлимым ценам. Гарантия 12 месяцев" />
 	<meta name="keywords" content="Создание сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?>на 1C Битрикс, создание сайтов на Битрикс, разработка сайтов на битрикс, разработка сайтов на 1С битрикс, bitrix, цены, стоимость" />
-	<link rel="icon" href="img/favicon.png" />
+
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="feedback-form/css/style.css">
-	<link rel="stylesheet" href="feedback-form/js/jquery.fancybox.css?v=2.1.5" media="screen" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/isotope.js"></script>
-	<script src="js/wow.js"></script>
-	<script src="js/jquery.countupcircle.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/messages_ru.js"></script>
-	<script>
-		new WOW().init();
-	</script>
+	<link rel="stylesheet" href="feedback-form/js/jquery.fancybox.css" media="screen" />
+
+
+
 	<style>
 	
 	</style>
 </head>
 <body>
+<section class="section_1">
 	<header class="sticky">
 		<div class="container">
 			<div class="row">
@@ -57,6 +64,9 @@
 			</div>
 		</div>
 	</header>
+</section>
+
+<section class="section_2">
 
 	<div class="map">
 		<div class="row">
@@ -150,7 +160,8 @@
 			setInterval(count, 1000);
 		</script>
 	</div>
-	
+</section>
+<section class="section_3">
 	<div class="container">
 		<a name="our_services"></a>
 		<div class="row">
@@ -193,9 +204,9 @@
 			</div>
 		</div>
 	</div>
-		
-			
-		<a name="portfolio"></a><br /><br />
+</section>
+<section class="section_4">
+		<br /><br />
 		<div class="portf">
 			<div class="prtf">
 				<div class="row">
@@ -250,7 +261,8 @@
 				</div>
 			</div>
 		</div>
-	
+</section>
+<section class="section_5">
 	<div class="container">
 		<div class="row">
 		<h2 id="tarifs">Наши тарифы</h2>
@@ -464,11 +476,13 @@
 		</div>
 		</div>
 	</div>
-	
+</section>
+<section class="section_6">
 	<div class="googleMap">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9683613084076!2d37.71008590000001!3d55.72430200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab5305b39c031%3A0x5abd07d7039116c7!2z0JDQstGC0L7QvNC-0LHQuNC70YzQvdGL0Lkg0L_RgC3QtCwgMTDRgTcsINCc0L7RgdC60LLQsCwgMTA5MDUy!5e0!3m2!1sru!2sru!4v1429690534699"></iframe>
 	</div>
-	
+</section>
+<sectin class="section_7">
 	<div class="container" style="margin-top:35px;">
 		<div class="row"> 
 		<div class="col-md-12">
@@ -562,8 +576,9 @@
 		</div>
 		</div>
 	</div>
-	
-	<footer>
+</sectin>
+<section class="section_8_footer">
+<footer>
 		<div class="footer_menu col-md-4 col-sm-8 col-lg-5">
 			<ul>
 				<li><a href="#our_services">Наши услуги</a></li>
@@ -610,8 +625,13 @@
 
 			
 	</footer>
+</section>
 
-	<script>
+
+
+
+
+<script>
 		$(window).load(function () {
 			var $container = $('.portfolioContainer');
 			$container.isotope({
@@ -663,5 +683,21 @@
 			win.focus();
 		}
 	</script>
+
+
+
+
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/isotope.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/jquery.countupcircle.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
+	<script src="js/messages_ru.js"></script>
+	<script>
+		new WOW().init();
+	</script>
+
+
 </body>
 </html>
