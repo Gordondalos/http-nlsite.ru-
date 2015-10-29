@@ -8,26 +8,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="description" content="Заказать создание сайта на Битрикс, разработку дизайна любой сложности в соответствии с пожеланиями клиента, поисковое продвижение, техническую поддержку сайта<?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?> или просто перенос сайта на битрикс по приемлимым ценам. Гарантия 12 месяцев" />
 	<meta name="keywords" content="Создание сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?>на 1C Битрикс, создание сайтов на Битрикс, разработка сайтов на битрикс, разработка сайтов на 1С битрикс, bitrix, цены, стоимость" />
-
-
+<!--стили бутстрапа-->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-
+<!--стили ишачка-->
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+	<!--стили анимации-->
 	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/style.css">
+<!--стили попап окошка-->
 	<link rel="stylesheet" href="feedback-form/css/style.css">
 	<link rel="stylesheet" href="feedback-form/js/jquery.fancybox.css" media="screen" />
-
-
-
+<!--собственные стили-->
+	<link rel="stylesheet" href="css/style.css">
+<!--тут будут стили шапки-->
 	<style>
 	
 	</style>
@@ -65,9 +62,7 @@
 		</div>
 	</header>
 </section>
-
 <section class="section_2">
-
 	<div class="map">
 		<div class="row">
 		<div class="col-md-5 orderForm">
@@ -103,62 +98,10 @@
 			<p class="presentation"><a href="http://www.nlsite.ru/files/kp.pdf">cкачать коммерческое предложение</a><span class="pdf"><img src="img/pdf-icon.png" alt=""></span></p>
 		</div>
 		</div>
-		<div id="popupform">
-			<div class="feedback_text">
-				<h2>У Вас есть вопросы?</h2>
-				<div class="comment">Укажите Ваш номер телефона и мы перезвоним Вам в самое ближайшее время.</div>
-			</div>
-			<form method="post" id="form-feedback">
-				<input type="text" placeholder="Ваше имя?" name="client_name" id="client_name" class="input_text" autofocus />
-				<div class="phone_number">
-					<input type="text" placeholder="Ваш телефон?" name="client_phone" id="client_phone" class="input_text" />
-				</div>	
-				<input class="button" type="submit" value="Жду звонка" /><br />
-				<div id="bthrow_error_name"></div>
-				<div id="bthrow_error_phone"></div>
-				<div class="throw_error"></div>
-			</form>
-		</div>
-		<a href="#popupform" id="popupbutton"><img id="phoneimg" src="feedback-form/img/phone-logo.png"  /></a>	
-			
-		<script type="text/javascript" src="feedback-form/js/jquery.mask.min.js"></script>
-		<script type="text/javascript" src="feedback-form/js/jquery.fancybox.pack.js?v=2.1.5"></script>
-		<script type="text/javascript" src="feedback-form/js/script.js"></script>
-		
-			
-		<script>
-			$(document).ready(function(){
-				$("#order").validate();        
-			});
-		</script>
-		<script>
-			count.seconds = parseInt($("#seconds_remain").text(), 10);
-			count.minutes = parseInt($("#minutes_remain").text(), 10);
-			count.hours = parseInt($("#hours_remain").text(), 10);
-			count.days = parseInt($("#days_remain").text(), 10);
-			function count () {
-				count.seconds--;
-				if(count.seconds < 0){
-					count.seconds = 59;
-					count.minutes--;
-					if(count.minutes < 0){
-						count.minutes = 59;
-						count.hours--;
-						if(count.hours < 0) {
-							count.hours = 23;
-							count.days--;
-						}
-					}
-				}
-				
-				$("#seconds_remain").html(count.seconds);
-				$("#minutes_remain").html(count.minutes);
-				$("#hours_remain").html(count.hours);
-				$("#days_remain").html(count.days);
-			}
-			
-			setInterval(count, 1000);
-		</script>
+
+
+
+
 	</div>
 </section>
 <section class="section_3">
@@ -379,52 +322,7 @@
 				</div>
 			</div>
 		</div>
-		<script>
-			$(document).ready(function(){
-				$('.btn-primary').on('click', function(){
-				})
-			})
-		</script>
-		<script>
-			$(document).ready(function(){
-				$('.krest').on('click', function(){
-					$('.fade').css('display','none')
-				})
 
-
-			})
-		</script>
-		<script>
-			$(document).ready(function(){
-				$("form.contact").validate();
-
-			});
-		</script>
-
-		<script>
-			 $(document).on("click", ".modalOrder", function () {
-				var tariff = $(this).data('tariff');
-				$(".contact #tariff").val(tariff);
-			});
-		</script>
-
-		<script>
-			$(document).ready(function(){
-				$("button.submit").click(function(){
-					$.ajax({
-						type: "POST",
-						url: "mail.php", //process to mail
-						data: $('form.contact').serialize(),
-						success: function(msg){
-							$(".modal").modal('hide'); //hide popup
-						},
-						error: function(){
-							alert("Ошибка отправки. Попробуйте позже или свяжитесь с нами");
-						}
-					});
-				});
-			});
-		</script>
 
 		<a name="opinions"></a><br /><br />
 		<div class="row">
@@ -482,7 +380,7 @@
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9683613084076!2d37.71008590000001!3d55.72430200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab5305b39c031%3A0x5abd07d7039116c7!2z0JDQstGC0L7QvNC-0LHQuNC70YzQvdGL0Lkg0L_RgC3QtCwgMTDRgTcsINCc0L7RgdC60LLQsCwgMTA5MDUy!5e0!3m2!1sru!2sru!4v1429690534699"></iframe>
 	</div>
 </section>
-<sectin class="section_7">
+<section class="section_7">
 	<div class="container" style="margin-top:35px;">
 		<div class="row"> 
 		<div class="col-md-12">
@@ -576,8 +474,8 @@
 		</div>
 		</div>
 	</div>
-</sectin>
-<section class="section_8_footer">
+</section>
+<section class="section_footer">
 <footer>
 		<div class="footer_menu col-md-4 col-sm-8 col-lg-5">
 			<ul>
@@ -626,76 +524,45 @@
 			
 	</footer>
 </section>
+<section class="section_popap">
+<div id="popupform">
+	<div class="feedback_text">
+		<h2>У Вас есть вопросы?</h2>
+		<div class="comment">Укажите Ваш номер телефона и мы перезвоним Вам в самое ближайшее время.</div>
+	</div>
+	<form method="post" id="form-feedback">
+		<input type="text" placeholder="Ваше имя?" name="client_name" id="client_name" class="input_text" autofocus />
+		<div class="phone_number">
+			<input type="text" placeholder="Ваш телефон?" name="client_phone" id="client_phone" class="input_text" />
+		</div>
+		<input class="button" type="submit" value="Жду звонка" /><br />
+		<div id="bthrow_error_name"></div>
+		<div id="bthrow_error_phone"></div>
+		<div class="throw_error"></div>
+	</form>
+</div>
+<a href="#popupform" id="popupbutton"><img id="phoneimg" src="feedback-form/img/phone-logo.png"  /></a>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="feedback-form/js/jquery.mask.min.js"></script>
+<script type="text/javascript" src="feedback-form/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="feedback-form/js/script.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/isotope.js"></script>
+<script type="text/javascript" src="js/wow.js"></script>
+<script type="text/javascript" src="js/jquery.countupcircle.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/messages_ru.js"></script>
+
+
+<script src="js/main.js"></script>
 
 
 
-
-
-<script>
-		$(window).load(function () {
-			var $container = $('.portfolioContainer');
-			$container.isotope({
-				filter: '*',
-				animationOptions: {
-					duration: 750,
-					easing: 'linear',
-					queue: false
-				}
-			});
-
-			$('.portfolioFilter a').click(function () {
-				$('.portfolioFilter .current').removeClass('current');
-				$(this).addClass('current');
-
-				var selector = $(this).attr('data-filter');
-				$container.isotope({
-					filter: selector,
-					animationOptions: {
-						duration: 750,
-						easing: 'linear',
-						queue: false
-					}
-				});
-				return false;
-			});
-		});
-	</script>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.countBox').CountUpCircle({
-				duration: 500, // In ms, default: 5000
-				opacity_anim: false,
-				step_divider: 1
-			});
-		});
-	</script>
-	
-	<script type="text/javascript">
-		function winOpen() {
-			var win;
-			var w = 300, 
-				h = 300,
-				l = (screen.width - w) / 2,
-				t = (screen.height - h) / 2,
-				p = "width="+w+", height="+h+", top="+t+", left="+l;
-			win = window.open("", "", p);
-			win.focus();
-		}
-	</script>
-
-
-
-
-
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/isotope.js"></script>
-	<script src="js/wow.js"></script>
-	<script src="js/jquery.countupcircle.js"></script>
-	<script src="js/jquery.validate.min.js"></script>
-	<script src="js/messages_ru.js"></script>
 	<script>
-		new WOW().init();
+
 	</script>
 
 
