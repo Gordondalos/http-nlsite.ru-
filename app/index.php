@@ -475,7 +475,7 @@
 		</div>
 	</div>
 </section>
-<section class="section_footer">
+<section class="section_8">
 <footer>
 		<div class="footer_menu col-md-4 col-sm-8 col-lg-5">
 			<ul>
@@ -524,7 +524,7 @@
 			
 	</footer>
 </section>
-<section class="section_popap">
+<section class="section_9">
 <div id="popupform">
 	<div class="feedback_text">
 		<h2>У Вас есть вопросы?</h2>
