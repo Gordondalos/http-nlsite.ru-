@@ -1,0 +1,10 @@
+AddDefaultCharset UTF-8
+
+RewriteEngine On		
+RewriteCond %{THE_REQUEST} /subdmn/[^/]
+RewriteRule ^subdmn/[^/]+/(.*) /$1 [R=permanent,L]
+RewriteCond %{HTTP_HOST} ^(.+)\.nlsite\.ru$ [NC]
+RewriteCond %{HTTP_HOST} !^www\.nlsite\.ru$ [NC]
+RewriteCond %{REQUEST_URI} !^/subdmn
+RewriteRule ^(.*)$ /subdmn/%1%{REQUEST_URI} [L]
+
