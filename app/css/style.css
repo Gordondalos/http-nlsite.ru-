@@ -220,7 +220,7 @@ button::-moz-focus-inner {
 	font-size: 2em;
 	background-color: rgba(255, 255, 255, 1);
 	background-image: url('../img/counting.png');
-	background-repeat: none;
+	background-repeat: no-repeat;
 	background-position: center center;
 	border: 1px solid #b2b2b2;
 	border-bottom: 4px solid #b2b2b2;
@@ -1339,5 +1339,7 @@ iframe {
 	.contactsForm {
 		width: 100%;
 	}
-*/
+
 }
+
+*/

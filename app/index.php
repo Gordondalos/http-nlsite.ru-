@@ -547,7 +547,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="feedback-form/js/jquery.mask.min.js"></script>
-<script type="text/javascript" src="feedback-form/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript" src="feedback-form/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="feedback-form/js/script.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/isotope.js"></script>
