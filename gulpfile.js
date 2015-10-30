@@ -14,8 +14,10 @@ gulp.task('default',['connect','watch','reloadd']); // коннект не ра�
 gulp.task('watch', function(){
 	var server = livereload();
 	gulp.watch('sass/*.sass',['SassToCss']); // компилирую
-	gulp.watch('app/css/*.css',['autoprefix']); // добавляю префиксы
-	gulp.watch('app/css/*.css',['minCss']); // сжимаю
+	gulp.watch('sass/_project/section/*.sass',['compliteMainCss']); // компилирую
+	gulp.watch('sass/__base/part/*.sass',['compliteMainCss']); // компилирую
+	//gulp.watch('app/css/*.css',['autoprefix']); // добавляю префиксы
+	//gulp.watch('app/css/*.css',['minCss']); // сжимаю
 	//gulp.watch('app/css/*.css',['deleteCss']); // удаляю лишнее, не раскоментировать лучше просто запустить командной строки
 });
 
@@ -29,13 +31,24 @@ gulp.task('connect', function() {
 });
 
 // данный такс только компилирует ксс
+gulp.task('compliteMainCss', function(){
+	gulp.src('sass/main.sass')
+		//.pipe(sass({outputStyle: 'compressed'})) // раскоментируй для сжимания ксс
+		.pipe(sass())
+		.pipe(gulp.dest('app/css/'))
+		.pipe(notify('css'))
+	//.pipe(livereload());
+
+});
+
+// данный такс только компилирует ксс
 gulp.task('SassToCss', function(){
      gulp.src('sass/*.sass')
 		//.pipe(sass({outputStyle: 'compressed'})) // раскоментируй для сжимания ксс
 		.pipe(sass())
 		.pipe(gulp.dest('app/css/'))
 		.pipe(notify('css'))
-		.pipe(livereload());
+		//.pipe(livereload());
 
 });
 

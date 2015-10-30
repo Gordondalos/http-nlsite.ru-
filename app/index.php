@@ -19,16 +19,10 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <!--стили анимации-->
-<!--    <link rel="stylesheet" href="css/animate.css">-->
-    <!--стили попап окошка-->
-    <link rel="stylesheet" href="feedback-form/css/style.css">
-    <link rel="stylesheet" href="feedback-form/js/jquery.fancybox.css" media="screen"/>
-    <!--собственные стили-->
 
 
     <link rel="stylesheet" href="css/main.css">
-<!--    <link rel="stylesheet" href="css/style_old.css">-->
+
     <!--тут будут стили шапки-->
     <style>
 
@@ -36,97 +30,103 @@
 </head>
 <body>
 <section class="section_1">
-    <header>
-        <div class="container">
-            <div class="row">
-                <nav class="navbar navbar-default">
-                    <div class="leftHeader col-md-4 col-sm-3 col-xs-6">
-                        <div class="logo">
-                            <a href="/"><img style="display:inline;" class="img-responsive" alt="NLSITE" title="NLSITE"
-                                             src="img/logo.png"></a>
+    <div class="container-fluide">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-default">
+                        <div class="leftHeader col-md-4 col-sm-3 col-xs-6">
+                            <div class="logo">
+                                <a href="/"><img style="display:inline;" class="img-responsive" alt="NLSITE" title="NLSITE"
+                                                 src="img/logo.png"></a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3 col-sm-3 col-xs-12 phoneHeader">
-                        <p><a href="tel:+79852452405">+7 985 245 24 05</a></p>
-                    </div>
-                    <button class="navbar-toggle col-md-2 col-sm-3 col-xs-2" type="button" data-toggle="collapse"
-                            data-target="#navbar-main">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div class="navbar-collapse collapse" id="navbar-main">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li style="padding: 0 10px 0 20px;"><strong
-                                    style="font-size: 16pt;"><?php echo isset($city['nominative']) ? $city['nominative'] : "Москва"; ?></strong>
-                            </li>
-                            <li><a href="http://vk.com/nl_digital" target="_blank"><i class="icon icon-vk"></i></a></li>
-                            <li><a href="https://www.facebook.com/groups/nl.digital/" target="_blank"><i
-                                        class="icon icon-fb"></i></a></li>
-                            <li><a href="http://ok.ru/group/52650818076858" target="_blank"><i class="icon icon-twitter"></i></a>
-                            </li>
-                            <li><a href="https://plus.google.com/communities/114102265379721533821" target="_blank"><i
-                                        class="icon icon-google"></i></a></li>
-                        </ul>
-                    </div>
-                </nav>
+                        <div class="col-md-3 col-sm-3 col-xs-12 phoneHeader">
+                            <p><a href="tel:+79852452405">+7 985 245 24 05</a></p>
+                        </div>
+                        <button class="navbar-toggle col-md-2 col-sm-3 col-xs-2" type="button" data-toggle="collapse"
+                                data-target="#navbar-main">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-collapse collapse" id="navbar-main">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li style="padding: 0 10px 0 20px;"><strong
+                                        style="font-size: 16pt;"><?php echo isset($city['nominative']) ? $city['nominative'] : "Москва"; ?></strong>
+                                </li>
+                                <li><a href="http://vk.com/nl_digital" target="_blank"><i class="icon icon-vk"></i></a></li>
+                                <li><a href="https://www.facebook.com/groups/nl.digital/" target="_blank"><i
+                                            class="icon icon-fb"></i></a></li>
+                                <li><a href="http://ok.ru/group/52650818076858" target="_blank"><i
+                                            class="icon icon-twitter"></i></a>
+                                </li>
+                                <li><a href="https://plus.google.com/communities/114102265379721533821" target="_blank"><i
+                                            class="icon icon-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </div>
 </section>
 <section class="section_2">
     <div class="map">
-        <div class="row">
-            <div class="col-md-5 orderForm">
-                <div class="orderForm">
-                    <form id="order" action="mail.php" method="post">
-                        <fieldset>
-                            <p><label for="name">Имя</label></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 orderForm">
+                    <div class="orderForm">
+                        <form id="order" action="mail.php" method="post">
+                            <fieldset>
+                                <p><label for="name">Имя</label></p>
 
-                            <p><input type="text" name="name" id="name" minlength="3" required></p>
+                                <p><input type="text" name="name" id="name" minlength="3" required></p>
 
-                            <p><label for="email">E-mail</label></p>
+                                <p><label for="email">E-mail</label></p>
 
-                            <p><input type="text" name="email" id="email" required></p>
+                                <p><input type="text" name="email" id="email" required></p>
 
-                            <p><label for="phone">Телефон</label>
+                                <p><label for="phone">Телефон</label>
 
-                            <p><input type="text" name="phone" id="phone" required></p>
+                                <p><input type="text" name="phone" id="phone" required></p>
 
-                            <p><b>До конца акции осталось:</b></p>
+                                <p><b>До конца акции осталось:</b></p>
 
-                            <div id="days_remain">5</div>
-                            <div id="hours_remain">8</div>
-                            <div id="minutes_remain">1</div>
-                            <div id="seconds_remain">49</div>
-                            <span>дней &nbsp;&nbsp;&nbsp;&nbsp; часов &nbsp;&nbsp;&nbsp;&nbsp; минут &nbsp;&nbsp; секунд</span>
+                                <div class="wrapper">
+                                    <div id="days_remain">5</div>
+                                    <div id="hours_remain">8</div>
+                                    <div id="minutes_remain">1</div>
+                                    <div id="seconds_remain">49</div>
 
-                            <p><b style="margin-bottom:0;">Закажи сайт сейчас &nbsp;&nbsp;<br/> и получи скидку
-                                    <span>20%</span></b></p>
+                                    <span>дней &nbsp;&nbsp;&nbsp;&nbsp; часов &nbsp;&nbsp;&nbsp;&nbsp; минут &nbsp;&nbsp; секунд</span>
+                                </div>
+                                <p><b style="margin-bottom:0;">Закажи сайт сейчас &nbsp;&nbsp;<br/> и получи скидку
+                                        <span>20%</span></b></p>
 
-                            <button data-target="#myModal" data-toggle="modal"
-                                    class="btn btn-primary modalOrder portfBtn">Заказать сайт
-                            </button>
-                        </fieldset>
-                    </form>
+                                <button data-target="#myModal" data-toggle="modal"
+                                        class="btn btn-primary modalOrder portfBtn">Заказать сайт
+                                </button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-5 bigInfo">
+                    <h1>Создание сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?></h1>
+
+                    <p>Создание интернет-магазинов<br/>(на 1С Битриксе)</p>
+
+                    <div class="presentation"><a
+                            href="http://www.nlsite.ru/files/kp.pdf">cкачать коммерческое предложение</a><span
+                            class="pdf"><img src="img/pdf-icon.png" alt=""></span></div>
                 </div>
             </div>
-            <div class="col-md-5 bigInfo">
-                <h1>Создание сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?></h1>
-
-                <p>Создание интернет-магазинов<br/>(на 1С Битриксе)</p>
-
-                <p class="presentation"><a href="http://www.nlsite.ru/files/kp.pdf">cкачать коммерческое предложение</a><span
-                        class="pdf"><img src="img/pdf-icon.png" alt=""></span></p>
-            </div>
         </div>
-
 
     </div>
 </section>
 <section class="section_3">
     <div class="container">
-        <a name="our_services"></a>
 
         <div class="row">
             <h2>Наши услуги</h2>
@@ -182,9 +182,10 @@
     </div>
 </section>
 <section class="section_4">
-    <br/><br/>
 
-    <div class="portf">
+
+    <div class="container-fluid">
+
         <div class="prtf">
             <div class="row">
                 <h2>Наше портфолио</h2>
@@ -192,59 +193,89 @@
 
             <div class="row">
                 <ul>
-                    <li>
-                        <div class="portfolioContainer col-md-3 col-sm-4 col-xs-12">
-                            <a class="aimg" href="http://www.bellapotemkina.com/" target="_blank"><img
-                                    src="img/portfolio/bella_potemkina.png" alt="Бутик Bella Potemkina"
-                                    title="Бутик Bella Potemkina"></a>
-                        </div>
+
+                    <li class="li-wrap">
+                        <a href="http://www.bellapotemkina.com/" target="_blank">
+                            <div class="wrap-img">
+
+                                <img src="img/portfolio/bella_potemkina.png" alt="Бутик Bella Potemkina"
+                                     title="Бутик Bella Potemkina">
+
+                            </div>
+                        </a>
                     </li>
 
-                    <li>
-                        <div class="portfolioContainer col-md-3 col-sm-4 col-xs-12">
-                            <a class="aimg" href="http://mgsystem.net/" target="_blank"><img src="img/portfolio/mgs.png"
-                                                                                             alt="Компания MGSystem"
-                                                                                             title="Компания MGSystem"></a>
-                        </div>
+                    <li class="li-wrap">
+                        <a href="http://mgsystem.net/" target="_blank">
+                            <div class="wrap-img">
+
+                                <img src="img/portfolio/mgs.png"
+                                     alt="Компания MGSystem" title="Компания MGSystem">
+
+                            </div>
+                        </a>
                     </li>
 
-                    <li>
-                        <div class="portfolioContainer col-md-3 col-sm-4 col-xs-12">
-                            <a class="aimg" href="http://yugall.ru/" target="_blank"><img src="img/portfolio/yugal.png"
-                                                                                          alt="Корпорация Южный Альянс"
-                                                                                          title="Корпорация Южный Альянс"></a>
-                        </div>
+                    <li class="li-wrap">
+                        <a href="http://yugall.ru/" target="_blank">
+                            <div class="wrap-img">
+
+                                <img src="img/portfolio/yugal.png"
+                                     alt="Корпорация Южный Альянс"
+                                     title="Корпорация Южный Альянс">
+
+                            </div>
+                        </a>
                     </li>
 
-                    <li>
-                        <div class="portfolioContainer col-md-3 col-sm-4 col-xs-12">
-                            <a class="aimg" href="http://eurobetonplus.ru/" target="_blank"><img
-                                    src="img/portfolio/eurobetonplus.png" alt="Компания ЕвробетонПлюс"
-                                    title="Компания ЕвробетонПлюс"" /></a>
-                        </div>
+                    <li class="li-wrap">
+                        <a href="http://eurobetonplus.ru/" target="_blank">
+                            <div class="wrap-img">
+
+                                <img src="img/portfolio/eurobetonplus.png"
+                                     alt="Компания ЕвробетонПлюс"
+                                     title="Компания ЕвробетонПлюс"" />
+
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <ul>
+
+                    <li class="li-wrap">
+                        <a href="http://www.union.ru/" target="_blank">
+                            <div class="wrap-img">
+
+                                <img src="img/portfolio/union_porte.png" alt="Сайт-каталог Union.ru"
+                                     title="Сайт-каталог Union.ru">
+
+                            </div>
+                        </a>
                     </li>
 
-                    <li>
-                        <div class="portfolioContainer col-md-3 col-sm-4 col-xs-12">
-                            <a class="aimg" href="http://www.union.ru/" target="_blank"><img
-                                    src="img/portfolio/union_porte.png" alt="Сайт-каталог Union.ru"
-                                    title="Сайт-каталог Union.ru"></a>
-                        </div>
-                    </li>
+                    <li class="li-wrap">
+                        <a href="http://profstroy.pro/" target="_blank">
+                            <div class="wrap-img">
 
-                    <li>
-                        <div class="portfolioContainer col-md-3 col-sm-4 col-xs-12">
-                            <a class="aimg" href="http://profstroy.pro/" target="_blank"><img
+                                <img
                                     src="img/portfolio/profstroysite.png" alt="Компания ПрофСтрой"
-                                    title="Компания ПрофСтрой"></a>
-                        </div>
+                                    title="Компания ПрофСтрой">
+
+                            </div>
+                        </a>
                     </li>
 
-                    <li>
-                        <div class="portfolioContainer col-md-3 col-sm-4 col-xs-12">
-                            <a class="aimg" href="http://imex-broker-moscow.ru/" target="_blank"><img
-                                    src="img/portfolio/imex.png" alt="Компания ИМЭКС" title="Компания ИМЭКС"></a>
-                        </div>
+                    <li class="li-wrap">
+                        <a href="http://imex-broker-moscow.ru/" target="_blank">
+                            <div class="wrap-img">
+
+                                <img
+                                    src="img/portfolio/imex.png" alt="Компания ИМЭКС" title="Компания ИМЭКС">
+                            </div>
+                        </a>
                     </li>
                 </ul>
                 <p>
@@ -255,6 +286,7 @@
             </div>
         </div>
     </div>
+
 </section>
 <section class="section_5">
     <div class="container">
@@ -446,74 +478,91 @@
 
         <a name="opinions"></a><br/><br/>
 
-</div>
-</section>
-
-<section class="section_6">
-    <div class="row">
-        <h2>Отзывы</h2>
     </div>
+</section>
+<section class="section_6">
+    <div class="container">
+        <div class="row">
+            <h2 id="white">Отзывы</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class=" wrap col-md-12">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 
-    <div class="row" style="height: auto; margin-bottom: 30px">
-        <div class="col-md-12">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                    </ol>
 
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <blockquote>В 2010 году мы задались вопросом создания сайта. Обращались в разные Интернет компании, но решили доверить создания своего проекта в компании BRAND-MAKER. Данную компанию нам посоветовал наш IT знакомый. Нам понравилось, что нам была сделана мобильная версия сайта бонусом, т.е. абсолютно бесплатно (http://m.imex-broker-moscow.ru/), за что огромное спасибо руководителю компании Игорю Носову. Желаем успехов и развития этой компании в будущем и будем все своим знакомым рекомендовать данную компанию.
+                                <h5>Мостовой Антон Сергеевич - <a target="_blank"
+                                                                  href="http://imex-broker-moscow.ru/">imex-broker-moscow.ru</a>
+                                </h5>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <blockquote>В 2010 году мы задались вопросом создания сайта. Обращались в разные Интернет компании, но решили доверить создания своего проекта в компании BRAND-MAKER. Данную компанию нам посоветовал наш IT знакомый. Нам понравилось, что нам была сделана мобильная версия сайта бонусом, т.е. абсолютно бесплатно (http://m.imex-broker-moscow.ru/), за что огромное спасибо руководителю компании Игорю Носову. Желаем успехов и развития этой компании в будущем и будем все своим знакомым рекомендовать данную компанию.</blockquote>
-                        <h5>Мостовой Антон Сергеевич - <a target="_blank"
-                                                          href="http://imex-broker-moscow.ru/">imex-broker-moscow.ru</a>
-                        </h5>
+                            </blockquote>
+
+                        </div>
+                        <div class="item">
+                            <blockquote>Мы решили обратиться в данную компанию по совету знакомых. И ничуть не пожалели. Создание сайта, было выполнено точно по техническому заданию и в соответствии с календарным планом. Процесс завершения проекта оттягивался только из-за нас. Мы получили новый сайт с адаптивным дизайном, обновленный прайс-лист и каталог продукции. Очень приятно было, что компания полностью вникла в наш бизнес.
+                                <h5>Зуев Сергей Васильевич - <a target="_blank" href="http://www.yugall.ru/">yugall.ru</a>
+                                </h5>
+                            </blockquote>
+
+                        </div>
+                        <div class="item">
+                            <blockquote>Выражаю огромное СПАСИБО сотрудникам компании BRAND-MAKER, которые смогли глубоко вникнуть в стоящую перед нашим бизнесом задачу по созданию представленности бренда DoorHan в сети Интернет. На начало сотрудничества, компания DoorHan была представлена в регионах России и СНГ гео-ориентированными интернет ресурсами в социальных сетях, но эти ресурсы не присутствовали в ТОПах на первых страницах органической выдачи поисковиков Яндекс и Google.
+                                <h5>Печёнов Николай Борисович - <a target="_blank"
+                                                                   href="http://www.doorhan.ru/">doorhan.ru</a>
+                                </h5>
+                            </blockquote>
+
+
+                        </div>
+                        <div class="item">
+                            <blockquote>Давно хотел расширить свой бизнес, но цены от ведущих Web-студий меня пугали. Я решился обратиться в компанию Brand-Maker и не пожалел. Дизайн и качественное выполнение работы стоили тех денег. Спасибо ребята, я очень доволен.
+                                <h5>Зулпукаров Нурбек Исаевич - <a target="_blank"
+                                                                   href="http://profstroy.ru/">profstroy.ru</a>
+                                </h5>
+
+                            </blockquote>
+
+                        </div>
                     </div>
-                    <div class="item">
-                        <blockquote>Мы решили обратиться в данную компанию по совету знакомых. И ничуть не пожалели. Создание сайта, было выполнено точно по техническому заданию и в соответствии с календарным планом. Процесс завершения проекта оттягивался только из-за нас. Мы получили новый сайт с адаптивным дизайном, обновленный прайс-лист и каталог продукции. Очень приятно было, что компания полностью вникла в наш бизнес.</blockquote>
-                        <h5>Зуев Сергей Васильевич - <a target="_blank" href="http://www.yugall.ru/">yugall.ru</a></h5>
-                    </div>
-                    <div class="item">
-                        <blockquote>Выражаю огромное СПАСИБО сотрудникам компании BRAND-MAKER, которые смогли глубоко вникнуть в стоящую перед нашим бизнесом задачу по созданию представленности бренда DoorHan в сети Интернет. На начало сотрудничества, компания DoorHan была представлена в регионах России и СНГ гео-ориентированными интернет ресурсами в социальных сетях, но эти ресурсы не присутствовали в ТОПах на первых страницах органической выдачи поисковиков Яндекс и Google.</blockquote>
-                        <h5>Печёнов Николай Борисович - <a target="_blank" href="http://www.doorhan.ru/">doorhan.ru</a>
-                        </h5>
-                    </div>
-                    <div class="item">
-                        <blockquote>Давно хотел расширить свой бизнес, но цены от ведущих Web-студий меня пугали. Я решился обратиться в компанию Brand-Maker и не пожалел. Дизайн и качественное выполнение работы стоили тех денег. Спасибо ребята, я очень доволен.</blockquote>
-                        <h5>Зулпукаров Нурбек Исаевич - <a target="_blank" href="http://profstroy.ru/">profstroy.ru</a>
-                        </h5>
-                    </div>
+
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-
-                <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
     </div>
-
-
-
 </section>
 <section class="section_7">
-    <div class="googleMap">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9683613084076!2d37.71008590000001!3d55.72430200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab5305b39c031%3A0x5abd07d7039116c7!2z0JDQstGC0L7QvNC-0LHQuNC70YzQvdGL0Lkg0L_RgC3QtCwgMTDRgTcsINCc0L7RgdC60LLQsCwgMTA5MDUy!5e0!3m2!1sru!2sru!4v1429690534699"></iframe>
+    <div class="container">
+        <div class="row">
+            <div class="googleMap">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9683613084076!2d37.71008590000001!3d55.72430200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab5305b39c031%3A0x5abd07d7039116c7!2z0JDQstGC0L7QvNC-0LHQuNC70YzQvdGL0Lkg0L_RgC3QtCwgMTDRgTcsINCc0L7RgdC60LLQsCwgMTA5MDUy!5e0!3m2!1sru!2sru!4v1429690534699"></iframe>
+            </div>
+        </div>
     </div>
 </section>
 <section class="section_8">
-    <div class="container" style="margin-top:35px;">
+    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="panel-group" id="accordion">
@@ -624,94 +673,108 @@
     </div>
 </section>
 <section class="section_9">
-    <footer>
-        <div class="footer_menu col-md-4 col-sm-8 col-lg-5">
-            <ul>
-                <li><a href="#our_services">Наши услуги</a></li>
-                <li><a href="#portfolio">Наше портфолио</a></li>
-                <li><a href="#tarifs">Наши тарифы</a></li>
-                <li><a href="#opinions">Отзывы</a></li>
-            </ul>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <footer>
+                    <div class="footer_menu col-md-4 col-sm-8 col-lg-5">
+                        <ul>
+                            <li><a href="#our_services">Наши услуги</a></li>
+                            <li><a href="#portfolio">Наше портфолио</a></li>
+                            <li><a href="#tarifs">Наши тарифы</a></li>
+                            <li><a href="#opinions">Отзывы</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="metrika col-md-3 col-lg-3">
+                        <!-- Yandex.Metrika informer -->
+                        <a href="https://metrika.yandex.ru/stat/?id=32553710&amp;from=informer"
+                           target="_blank" rel="nofollow"><img
+                                src="//informer.yandex.ru/informer/32553710/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
+                                title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+                                onclick="try{Ya.Metrika.informer({i:this,id:32553710,lang:'ru'});return false}catch(e){}"/></a>
+                        <!-- /Yandex.Metrika informer -->
+                        <!-- Yandex.Metrika counter -->
+                        <script type="text/javascript">
+                            (function (d, w, c) {
+                                (w[c] = w[c] || []).push(function () {
+                                    try {
+                                        w.yaCounter32553710 = new Ya.Metrika({
+                                            id: 32553710,
+                                            clickmap: true
+                                        });
+                                    } catch (e) {
+                                    }
+                                });
+
+                                var n = d.getElementsByTagName("script")[0],
+                                    s = d.createElement("script"),
+                                    f = function () {
+                                        n.parentNode.insertBefore(s, n);
+                                    };
+                                s.type = "text/javascript";
+                                s.async = true;
+                                s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+                                if (w.opera == "[object Opera]") {
+                                    d.addEventListener("DOMContentLoaded", f, false);
+                                } else {
+                                    f();
+                                }
+                            })(document, window, "yandex_metrika_callbacks");
+                        </script>
+                        <noscript>
+                            <div><img src="//mc.yandex.ru/watch/32553710" style="position:absolute; left:-9999px;" alt=""/>
+                            </div>
+                        </noscript>
+                        <!-- /Yandex.Metrika counter -->
+                    </div>
+                    <div class='SEO' style="float: right;">
+                        <p style="text-align:center;"><a
+                                href="http://<?php echo isset($city['next_url']) ? $city['next_url'] : "aprelevka"; ?>.nlsite.ru/"
+                                target="_blank">Продвижение сайтов <?php echo isset($city['next']) ? $city['next'] : "в Апрелевке"; ?></a>
+                        </p>
+                    </div>
+
+
+                </footer>
+            </div>
         </div>
-
-        <div class="metrika col-md-3 col-lg-3">
-            <!-- Yandex.Metrika informer -->
-            <a href="https://metrika.yandex.ru/stat/?id=32553710&amp;from=informer"
-               target="_blank" rel="nofollow"><img
-                    src="//informer.yandex.ru/informer/32553710/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
-                    style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
-                    title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
-                    onclick="try{Ya.Metrika.informer({i:this,id:32553710,lang:'ru'});return false}catch(e){}"/></a>
-            <!-- /Yandex.Metrika informer -->
-            <!-- Yandex.Metrika counter -->
-            <script type="text/javascript">
-                (function (d, w, c) {
-                    (w[c] = w[c] || []).push(function () {
-                        try {
-                            w.yaCounter32553710 = new Ya.Metrika({
-                                id: 32553710,
-                                clickmap: true
-                            });
-                        } catch (e) {
-                        }
-                    });
-
-                    var n = d.getElementsByTagName("script")[0],
-                        s = d.createElement("script"),
-                        f = function () {
-                            n.parentNode.insertBefore(s, n);
-                        };
-                    s.type = "text/javascript";
-                    s.async = true;
-                    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-
-                    if (w.opera == "[object Opera]") {
-                        d.addEventListener("DOMContentLoaded", f, false);
-                    } else {
-                        f();
-                    }
-                })(document, window, "yandex_metrika_callbacks");
-            </script>
-            <noscript>
-                <div><img src="//mc.yandex.ru/watch/32553710" style="position:absolute; left:-9999px;" alt=""/></div>
-            </noscript>
-            <!-- /Yandex.Metrika counter -->
-        </div>
-        <div class='SEO' style="float: right;">
-            <p style="text-align:center;"><a
-                    href="http://<?php echo isset($city['next_url']) ? $city['next_url'] : "aprelevka"; ?>.nlsite.ru/"
-                    target="_blank">Продвижение сайтов <?php echo isset($city['next']) ? $city['next'] : "в Апрелевке"; ?></a>
-            </p>
-        </div>
-
-
-    </footer>
+    </div>
 </section>
 <section class="section_10">
-    <div id="popupform">
-        <div class="feedback_text">
-            <h2>У Вас есть вопросы?</h2>
+    <div class="container">
+        <div class="row">
+            <div id="popupform">
+                <div class="feedback_text">
+                    <h2>У Вас есть вопросы?</h2>
 
-            <div class="comment">Укажите Ваш номер телефона и мы перезвоним Вам в самое ближайшее время.</div>
-        </div>
-        <form method="post" id="form-feedback">
-            <input type="text" placeholder="Ваше имя?" name="client_name" id="client_name" class="input_text" autofocus/>
+                    <div class="comment">Укажите Ваш номер телефона и мы перезвоним Вам в самое ближайшее время.</div>
+                </div>
+                <form method="post" id="form-feedback">
+                    <input type="text" placeholder="Ваше имя?" name="client_name" id="client_name" class="input_text"
+                           autofocus/>
 
-            <div class="phone_number">
-                <input type="text" placeholder="Ваш телефон?" name="client_phone" id="client_phone" class="input_text"/>
+                    <div class="phone_number">
+                        <input type="text" placeholder="Ваш телефон?" name="client_phone" id="client_phone"
+                               class="input_text"/>
+                    </div>
+                    <input class="button" type="submit" value="Жду звонка"/><br/>
+
+                    <div id="bthrow_error_name"></div>
+                    <div id="bthrow_error_phone"></div>
+                    <div class="throw_error"></div>
+                </form>
             </div>
-            <input class="button" type="submit" value="Жду звонка"/><br/>
-
-            <div id="bthrow_error_name"></div>
-            <div id="bthrow_error_phone"></div>
-            <div class="throw_error"></div>
-        </form>
+            <a href="#popupform" id="popupbutton"><img id="phoneimg" src="feedback-form/img/phone-logo.png"/></a>
+        </div>
     </div>
-    <a href="#popupform" id="popupbutton"><img id="phoneimg" src="feedback-form/img/phone-logo.png"/></a>
+
 </section>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="feedback-form/js/jquery.mask.min.js"></script>
 <script type="text/javascript" src="feedback-form/js/jquery.fancybox.pack.js"></script>
 <script type="text/javascript" src="feedback-form/js/script.js"></script>

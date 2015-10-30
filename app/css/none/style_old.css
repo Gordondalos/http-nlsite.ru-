@@ -369,7 +369,7 @@ header {
 }
 
 .container h2 {
-	color: #39f;
+	color: $blue;
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 2em;
@@ -388,7 +388,7 @@ header {
 	vertical-align: bottom;
 	background: #000;
 	background-clip: content-box;
-	border-bottom: 3px solid #39f;
+	border-bottom: 3px solid $blue;
 }
 .container h2:before {
 	left: -.5em;
@@ -492,7 +492,7 @@ header {
 
 .container h3 {
 	text-align: center;
-	color: #39f;
+	color: $blue;
 	font-size: 1.3em;
 	margin-bottom: 35px;
 }
@@ -607,7 +607,7 @@ header {
 }
 
 .priceHead h6{
-	color: #39f;
+	color: $blue;
 	padding-top: 135px;
 	margin-bottom: 10px;
 	font-size: 1.4em;
