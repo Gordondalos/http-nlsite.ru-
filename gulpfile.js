@@ -16,10 +16,11 @@ gulp.task('watch', function(){
 	gulp.watch('sass/*.sass',['SassToCss']); // компилирую
 	gulp.watch('sass/_project/section/*.sass',['compliteMainCss']); // компилирую
 	gulp.watch('sass/__base/part/*.sass',['compliteMainCss']); // компилирую
-	//gulp.watch('app/css/*.css',['autoprefix']); // добавляю префиксы
+	gulp.watch('app/css/*.css',['autoprefix']); // добавляю префиксы
 	//gulp.watch('app/css/*.css',['minCss']); // сжимаю
 	//gulp.watch('app/css/*.css',['deleteCss']); // удаляю лишнее, не раскоментировать лучше просто запустить командной строки
 });
+
 
 gulp.task('connect', function() {
 	connect.server({
@@ -57,7 +58,7 @@ gulp.task('minCss', function(){
      gulp.src('app/css/*.css')
 		.pipe(minifyCss())
 		.pipe(gulp.dest('app/css/'))
-		.pipe(connect.reload())
+		//.pipe(connect.reload())
 		.pipe(notify('mini css'));
 
 });
