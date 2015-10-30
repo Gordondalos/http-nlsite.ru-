@@ -12,7 +12,6 @@
 	background-color:rgba(0,0,0,0.8);
 	overflow:hidden;
 	display:none;
-	-moz-transition:opacity 1s ease;
 	-webkit-transition:opacity 1s ease;
 	transition:opacity 1s ease;
 }
@@ -32,8 +31,6 @@
 	width:100%;
 	white-space: nowrap;
 	position:absolute;
-	
-	-moz-transition:left 0.4s ease;
 	-webkit-transition:left 0.4s ease;
 	transition:left 0.4s ease;
 }
@@ -77,18 +74,6 @@
 
 /* Firefox Keyframe Animations */
 
-@-moz-keyframes rightSpring{
-	0%{		margin-left:0px;}
-	50%{	margin-left:-30px;}
-	100%{	margin-left:0px;}
-}
-
-@-moz-keyframes leftSpring{
-	0%{		margin-left:0px;}
-	50%{	margin-left:30px;}
-	100%{	margin-left:0px;}
-}
-
 /* Safari and Chrome Keyframe Animations */
 
 @-webkit-keyframes rightSpring{
@@ -117,8 +102,6 @@
 	
 	top:50%;
 	margin-top:-29px;
-	
-	-moz-transition:opacity 0.2s ease;
 	-webkit-transition:opacity 0.2s ease;
 	transition:opacity 0.2s ease;
 }
