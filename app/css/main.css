@@ -3128,7 +3128,7 @@ header {
   font-size: 20px; }
 
 .orderForm {
-  min-width: 275px;
+  width: 275px;
   left: 10%;
   top: 15%;
   font-family: arial, helvetica, sans-serif; }
@@ -3242,6 +3242,9 @@ header {
   width: 32px;
   height: 32px;
   background-position: -131px -5px; }
+
+#order {
+  width: 275px !important; }
 
 .wow {
   text-align: center; }

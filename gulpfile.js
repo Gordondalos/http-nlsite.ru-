@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     connect = require('gulp-connect'),
     concatCss = require('gulp-concat-css'),
     cssmin = require('gulp-cssmin'),
+    concat = require('gulp-concat'),
+    minify = require('gulp-minify'),
     rename = require('gulp-rename');
 
 
@@ -108,5 +110,33 @@ gulp.task('cascad', function(){
         .pipe(cssmin())
         .pipe(gulp.dest('app/css/finalcss/'))
         .pipe(connect.reload())
+        .pipe(notify('done!'));
+});
+
+
+gulp.task('js', function(){
+    return gulp.src([
+        'app/js/jquery.min.js',
+        'app/js/jquery.js',
+
+        'app/js/jquery.fancybox.pack.js',
+        'app/js/jquery.mask.min.js',
+        'app/js/script.js',
+        'app/js/isotope.js',
+        'app/js/jquery.countupcircle.js',
+        'app/js/jquery.validate.min.js',
+        'app/js/bootstrap.min.js',
+        'app/js/jquery.mask.min.js',
+        'app/js/messages_ru.js',
+
+        'app/js/main.js',
+        'app/js/wow.js'
+    ])
+        .pipe(concat('all.js'))
+        .pipe(minify({
+            exclude: ['tasks'],
+            ignoreFiles: ['bootstrap.js', 'jquery - 9.1.9.js']
+        }))
+        .pipe(gulp.dest('app/finaljs/'))
         .pipe(notify('done!'));
 });

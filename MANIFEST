@@ -1,0 +1,24 @@
+This zip file contains optimized resources for http://digital.greensoft.kg/. The optimized resources are listed below in the format of: 
+filename: url
+
+Note: We only include up to 10 MB of optimized contents. If the
+optimized contents of your page are larger than 10 MB, we list them in
+this file too, with 'NOT INCLUDED' to indicate those URLs require
+further optimization.
+
+css/main.css: http://digital.greensoft.kg/css/finalcss/main.css
+js/jquery.min.js: http://digital.greensoft.kg/js/jquery.min.js
+js/jquery.mask.min.js: http://digital.greensoft.kg/feedback-form/js/jquery.mask.min.js
+js/jquery.fancybox.pack.js: http://digital.greensoft.kg/feedback-form/js/jquery.fancybox.pack.js
+js/script.js: http://digital.greensoft.kg/feedback-form/js/script.js
+js/bootstrap.min.js: http://digital.greensoft.kg/js/bootstrap.min.js
+js/isotope.js: http://digital.greensoft.kg/js/isotope.js
+js/wow.js: http://digital.greensoft.kg/js/wow.js
+js/jquery.countupcircle.js: http://digital.greensoft.kg/js/jquery.countupcircle.js
+js/jquery.validate.min.js: http://digital.greensoft.kg/js/jquery.validate.min.js
+js/messages_ru.js: http://digital.greensoft.kg/js/messages_ru.js
+js/main.js: http://digital.greensoft.kg/js/main.js
+image/kh.jpg: https://khms0.google.com/kh?v=187&hl=en-US&gl=RU&x=2476&y=1280&z=12&token=36926
+image/kh_2.jpg: https://khms0.google.com/kh?v=187&hl=en-US&gl=RU&x=2476&y=1281&z=12&token=84082
+image/kh_3.jpg: https://khms1.google.com/kh?v=187&hl=en-US&gl=RU&x=2477&y=1280&z=12&token=105482
+image/kh_4.jpg: https://khms1.google.com/kh?v=187&hl=en-US&gl=RU&x=2477&y=1281&z=12&token=21567
