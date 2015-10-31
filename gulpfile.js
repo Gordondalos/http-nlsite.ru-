@@ -1,92 +1,112 @@
 var gulp = require('gulp'),
-	minifyCss = require('gulp-minify-css'),
-	notify = require('gulp-notify'),
-	sass = require('gulp-sass'),
-	uncss = require('gulp-uncss'),
-	prefix = require('gulp-autoprefixer'),
-	livereload = require('gulp-livereload'),
-	connect = require('gulp-connect'),
-	rename = require('gulp-rename');
+    minifyCss = require('gulp-minify-css'),
+    notify = require('gulp-notify'),
+    sass = require('gulp-sass'),
+    uncss = require('gulp-uncss'),
+    prefix = require('gulp-autoprefixer'),
+    livereload = require('gulp-livereload'),
+    connect = require('gulp-connect'),
+    concatCss = require('gulp-concat-css'),
+    cssmin = require('gulp-cssmin'),
+    rename = require('gulp-rename');
 
 
-gulp.task('default',['connect','watch','reloadd']); // РєРѕРЅРЅРµРєС‚ РЅРµ СЂР°Р±РѕС‚Р°РµС‚?
+gulp.task('default', ['connect','watch']);
+
+// конекты к серверу
+gulp.task('connect', function() {
+    connect.server({
+        root: 'app',
+        port: 8000,
+        livereload: true
+    })
+
+});
 
 gulp.task('watch', function(){
-	var server = livereload();
-	gulp.watch('sass/*.sass',['SassToCss']); // РєРѕРјРїРёР»РёСЂСѓСЋ
-	gulp.watch('sass/_project/section/*.sass',['compliteMainCss']); // РєРѕРјРїРёР»РёСЂСѓСЋ
-	gulp.watch('sass/__base/part/*.sass',['compliteMainCss']); // РєРѕРјРїРёР»РёСЂСѓСЋ
-	gulp.watch('app/css/*.css',['autoprefix']); // РґРѕР±Р°РІР»СЏСЋ РїСЂРµС„РёРєСЃС‹
-	//gulp.watch('app/css/*.css',['minCss']); // СЃР¶РёРјР°СЋ
-	//gulp.watch('app/css/*.css',['deleteCss']); // СѓРґР°Р»СЏСЋ Р»РёС€РЅРµРµ, РЅРµ СЂР°СЃРєРѕРјРµРЅС‚РёСЂРѕРІР°С‚СЊ Р»СѓС‡С€Рµ РїСЂРѕСЃС‚Рѕ Р·Р°РїСѓСЃС‚РёС‚СЊ РєРѕРјР°РЅРґРЅРѕР№ СЃС‚СЂРѕРєРё
-});
-
-
-gulp.task('connect', function() {
-	connect.server({
-		root: 'app',
-		port: 8000,
-		livereload: true
-	})
+   var server = livereload();
+   gulp.watch('sass/*.sass',['cascad']); // компилирую
+   gulp.watch('sass/_project/section/*.sass',['compliteMainCss']); // компилирую
+   gulp.watch('sass/__base/part/*.sass',['compliteMainCss']); // компилирую
 
 });
 
-// РґР°РЅРЅС‹Р№ С‚Р°РєСЃ С‚РѕР»СЊРєРѕ РєРѕРјРїРёР»РёСЂСѓРµС‚ РєСЃСЃ
-gulp.task('compliteMainCss', function(){
-	gulp.src('sass/main.sass')
-		//.pipe(sass({outputStyle: 'compressed'})) // СЂР°СЃРєРѕРјРµРЅС‚РёСЂСѓР№ РґР»СЏ СЃР¶РёРјР°РЅРёСЏ РєСЃСЃ
-		.pipe(sass())
-		.pipe(gulp.dest('app/css/'))
-		.pipe(notify('css'))
-	//.pipe(livereload());
 
-});
 
-// РґР°РЅРЅС‹Р№ С‚Р°РєСЃ С‚РѕР»СЊРєРѕ РєРѕРјРїРёР»РёСЂСѓРµС‚ РєСЃСЃ
+
+
+
+// данный такс только компилирует ксс
+//gulp.task('SassToCss', wrapPipe(function(success, error) {
 gulp.task('SassToCss', function(){
-     gulp.src('sass/*.sass')
-		//.pipe(sass({outputStyle: 'compressed'})) // СЂР°СЃРєРѕРјРµРЅС‚РёСЂСѓР№ РґР»СЏ СЃР¶РёРјР°РЅРёСЏ РєСЃСЃ
-		.pipe(sass())
-		.pipe(gulp.dest('app/css/'))
-		.pipe(notify('css'))
-		//.pipe(livereload());
+    gulp.src('sass/*.sass')
+        //.pipe(sass({outputStyle: 'compressed'}).on('error', error)) // раскоментируй для сжимания ксс
+        .pipe(sass({outputStyle: 'compressed'})) // раскоментируй для сжимания ксс
+        //.pipe(sass())
+        .pipe(gulp.dest('app/css/'))
+        //.pipe(notify('css'));
+        .pipe(notify('main css done!'));
+    //.pipe(livereload());
 
 });
+//}));
 
-// РґР°РЅРЅС‹Р№ С‚Р°СЃРє СЃР¶РёРјР°РµС‚ РєСЃСЃ
-gulp.task('minCss', function(){
-     gulp.src('app/css/*.css')
-		.pipe(minifyCss())
-		.pipe(gulp.dest('app/css/'))
-		//.pipe(connect.reload())
-		.pipe(notify('mini css'));
-
-});
-
-gulp.task('reloadd', function(){
-	gulp.src('app/css/*.css')
-
-	   .pipe(notify('reload'));
-});
-
+function wrapPipe(taskFn) {
+    return function(done) {
+        var onSuccess = function() {
+            done();
+        };
+        var onError = function(err) {
+            done(err);
+        };
+        var outStream = taskFn(onSuccess, onError);
+        if(outStream && typeof outStream.on === 'function') {
+            outStream.on('end', onSuccess);
+        }
+    }
+}
 
 
-// РґР°РЅРЅС‹Р№ С‚Р°РєСЃ СѓРґР°Р»СЏРµС‚ РЅРµРЅСѓР¶РЅС‹Рµ РєСЃСЃ СЃС‚РёР»Рё РёР· СѓРєР°Р·Р°РЅС‹С… С„Р°Р№Р»РѕРІ
+
+// данный такс удаляет ненужные ксс стили из указаных файлов
 gulp.task('deleteCss', function () {
     return gulp.src('app/css/*.css')
         .pipe(uncss({
             html: ['app/index.html'] //, 'posts/**/*.html', 'http://example.com']
         }))
         .pipe(gulp.dest('app/css/'))
-	    .pipe(notify('done!'));
+        .pipe(notify('done!'));
 });
 
 
-// РґР°РЅРЅС‹Р№ РєРѕРґ РґРѕР»Р¶РµРЅ РґРѕР±Р°РІР»СЏС‚СЊ Р°РІС‚РѕРїСЂРµС„РёРєСЃС‹
-gulp.task('autoprefix', function () {
-    return gulp.src('app/css/*.css')
+
+// данный такс только компилирует ксс
+gulp.task('compliteMainCss', function(){
+    gulp.src('sass/main.sass')
+        .pipe(sass())
+        .pipe(gulp.dest('app/css/'));
+    gulp.src('app/css/*.css')
+        .pipe(concatCss("main.css"))
         .pipe(prefix('last 15 version'))
-        .pipe(gulp.dest('app/css/'))
-		.pipe(connect.reload())
-	    .pipe(notify('autoprefix'));
+        //  .pipe(minifyCss())
+        .pipe(cssmin())
+        .pipe(gulp.dest('app/css/finalcss/'))
+        .pipe(connect.reload())
+        .pipe(notify('done!'));
+
+});
+
+
+gulp.task('cascad', function(){
+    gulp.src('sass/*.sass')
+        .pipe(sass())
+        .pipe(gulp.dest('app/css/'));
+    gulp.src('app/css/*.css')
+        .pipe(concatCss("main.css"))
+        .pipe(prefix('last 15 version'))
+      //  .pipe(minifyCss())
+        .pipe(cssmin())
+        .pipe(gulp.dest('app/css/finalcss/'))
+        .pipe(connect.reload())
+        .pipe(notify('done!'));
 });

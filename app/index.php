@@ -11,7 +11,7 @@
     <meta name="keywords"
           content="Создание сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?>на 1C Битрикс, создание сайтов на Битрикс, разработка сайтов на битрикс, разработка сайтов на 1С битрикс, bitrix, цены, стоимость"/>
     <!--стили бутстрапа-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css">-->
     <!--стили ишачка-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -21,11 +21,11 @@
     <![endif]-->
 
 
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/finalcss/main.css">
 
     <!--тут будут стили шапки-->
     <style>
-
+        .section_1{margin:0}.section_1 .wrapper > div{display:inline-block}header{position:fixed;top:0;left:0;width:100%;-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.3);box-shadow:0 1px 2px rgba(0,0,0,0.3);height:80px;background-color:#fff;z-index:100}.logo{margin-top:15px}.navbar{box-shadow:none;height:80px;margin-bottom:0}.navbar-default .navbar-nav > li{margin:22px 0 0;padding-bottom:0}.navbar-default .navbar-nav > li > a:hover{color:#0d87e9;border-bottom:2px #0096ff solid}.navbar-default .navbar-nav > li > a{font-size:16px;padding-top:5px;padding-bottom:0;display:inline-block;color:#232323;-webkit-transition:all .4s;transition:all .4s}.phoneHeader{text-align:center}.phoneHeader p{font-size:2em;padding-top:15px;margin-bottom:0}.phoneHeader a{text-decoration:none;color:#232323}.map{width:100%;height:700px;margin:80px 0 0;position:relative;background:url(./img/notebook.png) 100% 100% no-repeat;background-size:cover;background-position:0 0}.pdf{padding-left:10px}.pdf img{width:24px;height:24px}.bigInfo,.orderForm{position:absolute;top:20px}.bigInfo{right:7%;margin-top:20px;text-align:center}.bigInfo h1{color:#fff;font-size:40px}.bigInfo p{color:#fff;font-size:30px;margin-bottom:5px}.presentation{margin-top:230px}.presentation a{color:#fff;text-decoration:underline;font-size:20px}.orderForm{min-width:275px;left:10%;top:15%;font-family:arial,helvetica,sans-serif}.orderForm form{background-color:rgba(246,246,244,0.85);padding:10px;text-align:left;border:2px solid #666;-webkit-border-radius:.7em;border-radius:.7em;background-clip:padding-box;-webkit-box-shadow:8px 5px 10px;box-shadow:8px 5px 10px}.orderForm p{margin-bottom:0}.orderForm input{height:35px;width:100%;padding:5px;border:1px #969695 solid;-webkit-border-radius:.3em;border-radius:.3em;-webkit-box-shadow:1px 1px 3px #cbcbca;box-shadow:1px 1px 3px #cbcbca;margin:0 auto}.orderForm input:focus{-webkit-box-shadow:none;box-shadow:none}.orderForm label{font-weight:700;font-size:1.2em;font-style:normal;text-align:left;margin-bottom:0}.orderForm b{display:block;text-align:center;font-size:1.2em;margin-top:1em;margin-bottom:1em}.orderForm p b span{display:inline;padding:0 0 0 5px;color:#c00;font-size:1.2em}.orderForm i{font-style:oblique}#days_remain,#hours_remain,#minutes_remain,#seconds_remain{width:50px;float:left;margin-left:5px;text-align:center;font-weight:700;font-size:2em;background-color:#fff;background-image:url(./img/counting.png);background-repeat:no-repeat;background-position:center center;border:1px solid #b2b2b2;border-bottom:4px solid #b2b2b2;-webkit-border-radius:11px;border-radius:11px;-webkit-box-shadow:1px -1px 4px #eaecee;box-shadow:1px -1px 4px #eaecee}.orderForm span{display:block;padding:0 0 0 15px}.orderForm label.error{font-style:normal;font-weight:400;font-size:1em;color:#c00}.btn-primary{display:block;margin:auto;margin-top:10px}.icon{background-image:url(./img/spritesheet.png);background-repeat:no-repeat;display:block}.icon-vk{width:32px;height:32px;background-position:-5px -5px}.icon-fb{width:32px;height:32px;background-position:-47px -5px}.icon-twitter{width:32px;height:32px;background-position:-89px -5px}.icon-google{width:32px;height:32px;background-position:-131px -5px}
     </style>
 </head>
 <body>
