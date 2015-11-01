@@ -3644,6 +3644,40 @@ footer ul li {
 .metrika {
   text-align: center; }
 
+.article-section {
+  vertical-align: top; }
+
+.article {
+  min-height: 200px; }
+  .article h3, .article h4 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #39f; }
+  .article p {
+    text-align: justify; }
+
+.rigth-sidebar {
+  min-height: 200px;
+  padding-top: 11.5px;
+  text-align: left; }
+  .rigth-sidebar ul {
+    padding: 10px; }
+  .rigth-sidebar li {
+    list-style-type: none;
+    color: #131F51;
+    margin: 10px; }
+    .rigth-sidebar li a {
+      color: #131F51; }
+
+span.link-articles {
+  background-color: #39f;
+  display: block;
+  padding: 3px 20px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px; }
+
 @media screen and (max-device-width: 900px) {
   .bigInfo {
     display: none !important; } }
