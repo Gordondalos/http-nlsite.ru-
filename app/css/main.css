@@ -3654,6 +3654,12 @@ footer ul li {
     text-transform: uppercase;
     color: #39f; }
   .article p {
+    text-align: justify;
+    text-indent: 30px; }
+  .article ol {
+    padding-left: 10px;
+    margin-left: 10px; }
+  .article li {
     text-align: justify; }
 
 .rigth-sidebar {
@@ -3665,9 +3671,11 @@ footer ul li {
   .rigth-sidebar li {
     list-style-type: none;
     color: #131F51;
-    margin: 10px; }
+    margin: 5px 10px;
+    line-height: normal; }
     .rigth-sidebar li a {
-      color: #131F51; }
+      color: #131F51;
+      font-size: 16px; }
 
 span.link-articles {
   background-color: #39f;

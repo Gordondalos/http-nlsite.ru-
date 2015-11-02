@@ -76,6 +76,7 @@
         </header>
     </div>
 </section>
+
 <section class="section_2">
     <div class="map">
         <div class="container">
@@ -128,6 +129,38 @@
             </div>
         </div>
 
+    </div>
+</section>
+<section class="article-section">
+    <div class="container" ng-app="articles">
+        <div class="row">
+
+            <div class="rigth-sidebar col-md-4">
+                <span class="link-articles">Статьи</span>
+                <!--                    <ul ng-repeat="page in pages">-->
+                <ul>
+                    <!--                    	<li><a href="{{page.href}}">{{page.name}}</a></li>-->
+                    <li><a href="#/seo1">Низкочастотное продвижение сайтов</a></li>
+                    <li><a href="#/seo2">Этапы SEO Стратегии продвижения сайтов</a></li>
+                    <li><a href="#/seo3">Правильная SEO стратегия ссылочного произведения</a></li>
+                    <li><a href="#/seo4">Серые методы оптимизации сайта.</a></li>
+                    <li><a href="#/seo5">Подбор ключевых слов при SEO продвижении</a></li>
+                    <li><a href="#/seo6">Поисковая SEO оптимизация, как ускорить индексацию</a></li>
+                    <li><a href="#/seo7">Продвижение сайта с помощью статей</a></li>
+                    <li><a href="#/seo8">Продвижение сайта, что такое внутренняя оптимизация</a></li>
+                    <li><a href="#/seo9">Начальный этап продвижения сайта</a></li>
+                    <li><a href="#/seo10">Основные способы продвижения сайта</a></li>
+                    <li><a href="#/seo11">SEO способы продвижения сайтов</a></li>
+                    <li><a href="#/seo12">Черные методы продвижения сайта</a></li>
+
+                </ul>
+            </div>
+            <div class="article col-md-8" >
+                <div class="article-wrap">
+                    <ng-view></ng-view>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="section_3">
@@ -485,35 +518,7 @@
 
     </div>
 </section>
-<section class="article-section">
-    <div class="container" ng-app="articles">
-        <div class="row">
-            <div class="article col-md-8" >
-                <div class="article-wrap">
-                    <ng-view></ng-view>
-                </div>
-            </div>
-            <div class="rigth-sidebar col-md-4">
-                <span class="link-articles">Статьи</span>
-                <!--                    <ul ng-repeat="page in pages">-->
-                <ul>
-                    <!--                    	<li><a href="{{page.href}}">{{page.name}}</a></li>-->
-                    <li><a href="#/seo1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, voluptatibus.</a></li>
-                    <li><a href="#/seo2">Lorem ipsum dolor sit amet.</a></li>
-                    <li><a href="#/seo3">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#/seo4">Lorem ipsum dolor adipisicing elit.</a></li>
-                    <li><a href="#/seo5">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#/seo6">Lorem ipsum dolor  adipisicing elit.</a></li>
-                    <li><a href="#/seo7">Lorem ipsum dolor sit amet,  adipisicing elit.</a></li>
-                    <li><a href="#/seo8">Lorem ipsum dolor  elit.</a></li>
-                    <li><a href="#/seo9">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></li>
-                    <li><a href="#/seo10">Lorem ipsum dolor adipisicing elit.</a></li>
 
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="section_6">
     <div class="container">
         <div class="row">

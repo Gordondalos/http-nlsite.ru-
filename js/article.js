@@ -32,6 +32,12 @@ articles.config(['$routeProvider', function($routeProvide){
         .when('/seo10', {
             templateUrl:'./template/seo10.html'
         })
+        .when('/seo11', {
+            templateUrl:'./template/seo11.html'
+        })
+        .when('/seo12', {
+            templateUrl:'./template/seo12.html'
+        })
         //.when('/phones/:phoneId', {
         //    templateUrl:'template/phone-detail.html'
         //
