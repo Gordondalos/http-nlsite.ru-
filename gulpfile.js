@@ -9,11 +9,13 @@ var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),
     cssmin = require('gulp-cssmin'),
     concat = require('gulp-concat'),
-    minify = require('gulp-minify'),
-    rename = require('gulp-rename');
+    minify = require('gulp-minify');
+    //rigger = require('gulp-rigger'),
+    //rename = require('gulp-rename');
 
 
-gulp.task('default', ['connect','watch']);
+
+gulp.task('default', ['watch']);
 
 // конекты к серверу
 gulp.task('connect', function() {
@@ -89,9 +91,10 @@ gulp.task('compliteMainCss', function(){
         .pipe(gulp.dest('app/css/'));
     gulp.src('app/css/*.css')
         .pipe(concatCss("main.css"))
+        .pipe(notify("css"))
         .pipe(prefix('last 15 version'))
         //  .pipe(minifyCss())
-        .pipe(cssmin())
+      //  .pipe(cssmin())
         .pipe(gulp.dest('app/css/finalcss/'))
         .pipe(connect.reload())
         .pipe(notify('done!'));
@@ -107,10 +110,11 @@ gulp.task('cascad', function(){
         .pipe(concatCss("main.css"))
         .pipe(prefix('last 15 version'))
       //  .pipe(minifyCss())
-        .pipe(cssmin())
+      //  .pipe(cssmin())
         .pipe(gulp.dest('app/css/finalcss/'))
-        .pipe(connect.reload())
+        //.pipe(connect.reload())
         .pipe(notify('done!'));
+
 });
 
 
@@ -128,6 +132,9 @@ gulp.task('js', function(){
         'app/js/bootstrap.min.js',
         'app/js/jquery.mask.min.js',
         'app/js/messages_ru.js',
+        'app/js/angular.min.js',
+        'app/js/angular-route.min.js',
+        'app/js/article.js',
 
         'app/js/main.js',
         'app/js/wow.js'
@@ -140,3 +147,11 @@ gulp.task('js', function(){
         .pipe(gulp.dest('app/finaljs/'))
         .pipe(notify('done!'));
 });
+
+
+//gulp.task('html:build', function () {
+//    gulp.src('app/1/index.html') //Выберем файлы по нужному пути
+//        .pipe(rigger()) //Прогоним через rigger
+//        .pipe(gulp.dest('app/2/')); //Выплюнем их в папку build
+//
+//});

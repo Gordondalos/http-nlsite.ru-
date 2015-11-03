@@ -131,6 +131,35 @@ $(document).ready(function(){
     }
 
 
+    var is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+    var is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+    var is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+    var is_safari = navigator.userAgent.indexOf("Safari") > -1;
+    var is_opera = navigator.userAgent.toLowerCase().indexOf("op") > -1;
+
+
+// прокрутка к элементу
+    $(".rigth-sidebar").click(function () {
+        //var elementClick = $(this).attr("name");
+        //var destination = $('.'+elementClick).offset().top-100;
+        var destination = $('.article').offset().top-100;
+        if (is_safari) {
+            $('body').animate({ scrollTop: destination }, 1000); //1100 - ñêîðîñòü
+        } else {
+            $('html').animate({ scrollTop: destination }, 1000);
+        }
+        return false;
+    });
+
+
+    $(function() {
+        $( "#tabs" ).tabs().addClass( "ui-tabs-vertical ui-helper-clearfix" );
+        $( "#tabs li" ).removeClass( "ui-corner-top" ).addClass( "ui-corner-left" );
+        $("#tabs li a").css("outline","none");
+    });
+
+
+
 
 });
 
