@@ -3658,6 +3658,9 @@ footer ul li {
     margin-left: 10px; }
   .article li {
     text-align: justify; }
+  .article img {
+    width: 50%;
+    padding: 20px; }
 
 .rigth-sidebar {
   min-height: 200px;
@@ -3668,12 +3671,17 @@ footer ul li {
     .rigth-sidebar ul li {
       list-style-type: none;
       color: #131F51;
-      margin: 5px 10px; }
+      margin: 5px 20px; }
       .rigth-sidebar ul li a {
         color: #131F51;
         font-size: 16px;
         line-height: normal;
         outline: none; }
+  .rigth-sidebar img {
+    width: 50px;
+    float: left;
+    padding-right: 15px;
+    min-height: 24px; }
 
 span.link-articles {
   background-color: #39f;
