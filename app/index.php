@@ -35,22 +35,22 @@
         <header>
             <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="logo">
-                            <a href="/"><img src="img/logo.png" alt="NLSITE" title="NLSITE"></a>
-                        </div>
+                <div class="row hiddens">
+
+                    <div class="logo">
+                        <a href="/"><img src="img/logo.png" alt="NLSITE" title="NLSITE"></a>
                     </div>
 
-                    <div class=" phone col-md-4">
+                    <div class=" phone ">
                         <span>+7 985 245 24 05</span>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="icons">
                         <ul>
+
                             <li class="cityr">
                                 <div class="citywrap">
-                                    <b ><?php echo isset($city['nominative']) ? $city['nominative'] : "Москва"; ?> </b>
+                                    <b><?php echo isset($city['nominative']) ? $city['nominative'] : "Москва"; ?> </b>
                                 </div>
 
                             </li>

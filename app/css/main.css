@@ -3036,29 +3036,35 @@ section.section_1 {
   margin: 0; }
   section.section_1 .wrapper > div {
     display: inline-block; }
-  section.section_1 ul {
-    margin: 0 0;
-    padding: 0;
-    display: block;
-    text-align: left; }
-    section.section_1 ul li {
-      display: inline-block;
-      list-style-type: none;
-      margin: 25px 10px 0 0; }
-    section.section_1 ul li.cityr {
-      display: block;
-      margin: 20px 10px 0 0;
-      float: left;
-      font-size: 18px; }
-      section.section_1 ul li.cityr .citywrap {
-        margin-top: 5px; }
+  section.section_1 .row {
+    margin-top: 15px; }
 
 .logo {
-  margin-top: 15px; }
+  display: inline-block;
+  float: left; }
 
 .phone {
-  margin-top: 15px;
-  font-size: 2em; }
+  display: inline-block; }
+  .phone span {
+    font-size: 24px; }
+
+.icons {
+  display: inline-block;
+  float: right; }
+  .icons ul {
+    padding: 0; }
+  .icons .citywrap {
+    font-size: 16px;
+    float: left; }
+
+.icons li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0 10px 0 0; }
+
+li.citywrap {
+  display: block;
+  float: left; }
 
 header {
   position: fixed;
@@ -3673,34 +3679,32 @@ span.link-articles {
   font-weight: bold;
   font-size: 20px; }
 
-@media screen and (max-device-width: 1000px) {
-  #navbar-main {
-    width: 120px;
-    right: 0;
-    top: 80px;
-    position: absolute;
-    background-color: #fff;
-    opacity: .8; } }
-
 @media screen and (max-device-width: 900px) {
   .bigInfo {
     display: none !important; }
-  #navbar-main {
-    width: 120px;
-    right: 0;
-    top: 80px;
-    position: absolute;
-    background-color: #fff;
-    opacity: .8; } }
-
-.section_4 ul li.li-wrap {
-  width: 50%; }
+  .section_4 ul li.li-wrap {
+    width: 50%; } }
 
 @media screen and (max-device-width: 768px) {
-  #phoneimg {
+  .icons {
     display: none; } }
 
 @media screen and (max-width: 500px) {
+  .logo {
+    display: block;
+    float: none; }
+    .logo img {
+      height: 25px; }
+  .phone {
+    display: inline-block; }
+    .phone span {
+      font-size: 13px; }
+  header .container {
+    padding: 0 !important; }
+  .orderForm {
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%); }
   .tarif-control {
     width: 100%; }
   .citycol {

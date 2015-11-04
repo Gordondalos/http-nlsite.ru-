@@ -29,9 +29,9 @@ gulp.task('connect', function() {
 
 gulp.task('watch', function(){
    var server = livereload();
-   gulp.watch('sass/*.sass',['cascad']); // компилирую
-   gulp.watch('sass/_project/section/*.sass',['compliteMainCss']); // компилирую
-   gulp.watch('sass/__base/part/*.sass',['compliteMainCss']); // компилирую
+   gulp.watch('sass/**/*.sass',['cascad']); // компилирую
+   //gulp.watch('sass/_project/section/*.sass',['compliteMainCss']); // компилирую
+  // gulp.watch('sass/__base/part/*.sass',['compliteMainCss']); // компилирую
 
 });
 
@@ -43,7 +43,7 @@ gulp.task('watch', function(){
 // данный такс только компилирует ксс
 //gulp.task('SassToCss', wrapPipe(function(success, error) {
 gulp.task('SassToCss', function(){
-    gulp.src('sass/*.sass')
+    gulp.src('app/**/*.sass')
         //.pipe(sass({outputStyle: 'compressed'}).on('error', error)) // раскоментируй для сжимания ксс
         .pipe(sass({outputStyle: 'compressed'})) // раскоментируй для сжимания ксс
         //.pipe(sass())
@@ -87,16 +87,16 @@ gulp.task('deleteCss', function () {
 // данный такс только компилирует ксс
 gulp.task('compliteMainCss', function(){
     gulp.src('sass/main.sass')
-        .pipe(sass())
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(gulp.dest('app/css/'));
     gulp.src('app/css/*.css')
         .pipe(concatCss("main.css"))
-        .pipe(notify("css"))
-        .pipe(prefix('last 15 version'))
+    //    .pipe(notify("css+concat"))
+       // .pipe(prefix('last 15 version'))
         //  .pipe(minifyCss())
       //  .pipe(cssmin())
-        .pipe(gulp.dest('app/css/finalcss/'))
-        .pipe(connect.reload())
+       // .pipe(gulp.dest('app/css/finalcss/'))
+       // .pipe(connect.reload())
         .pipe(notify('done!'));
 
 });
@@ -108,7 +108,7 @@ gulp.task('cascad', function(){
         .pipe(gulp.dest('app/css/'));
     gulp.src('app/css/*.css')
         .pipe(concatCss("main.css"))
-        .pipe(prefix('last 15 version'))
+      //  .pipe(prefix('last 15 version'))
       //  .pipe(minifyCss())
       //  .pipe(cssmin())
         .pipe(gulp.dest('app/css/finalcss/'))
