@@ -107,7 +107,7 @@
                                 <p><b>До конца акции осталось:</b></p>
 
                                 <div class="wrapper">
-                                    <div id="days_remain">5</div>
+                                    <div id="days_remain">0</div>
                                     <div id="hours_remain">8</div>
                                     <div id="minutes_remain">1</div>
                                     <div id="seconds_remain">49</div>
@@ -125,9 +125,9 @@
                     </div>
                 </div>
                 <div class="col-md-5  bigInfo">
-                    <h1>Создание сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?></h1>
+                    <h1>Продвижение сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?></h1>
 
-                    <p>Создание интернет-магазинов<br/>(на 1С Битриксе)</p>
+                    <h1>Создание интернет-магазинов<br/>(на 1С Битриксе)</h1>
 
                     <div class="presentation pdf">
 
@@ -151,7 +151,7 @@
         <div class="row">
             <div id="tabs">
                 <div class="rigth-sidebar col-md-4">
-                    <span class="link-articles">Статьи</span>
+                    <span class="link-articles">Как попасть в топ-10</span>
 
                     <ul>
                         <li><a href="#tabs-1">Низкочастотное продвижение сайтов</a></li>
@@ -759,9 +759,9 @@
 
                     <p class="none">Наполнение сайта товарами</p>
 
-                    <p><span class="oldprice">60 000 рублей</span></p>
+                    <p><span class="oldprice">35 000 рублей</span></p>
 
-                    <p><span class="price">от 50 000 рублей</span></p>
+                    <p><span class="price">от 20 000 рублей</span></p>
 
                     <p>
                         <button data-target="#myModal" data-tariff="Лендинг" data-price="50 000 рублей" data-toggle="modal"
@@ -794,9 +794,9 @@
 
                     <p class="none">Наполнение сайта товарами</p>
 
-                    <p><span class="oldprice">90 000 рублей</span></p>
+                    <p><span class="oldprice">45 000 рублей</span></p>
 
-                    <p><span class="price">от 75 000 рублей</span></p>
+                    <p><span class="price">от 30 000 рублей</span></p>
 
                     <p>
                         <button data-target="#myModal" data-tariff="Корпоративный сайт" data-price="75 000 рублей"
@@ -830,9 +830,9 @@
 
                     <p class="ok">Наполнение сайта товарами</p>
 
-                    <p><span class="oldprice">125 000 рублей</span></p>
+                    <p><span class="oldprice">55 000 рублей</span></p>
 
-                    <p><span class="price">от 100 000 рублей</span></p>
+                    <p><span class="price">от 40 000 рублей</span></p>
 
                     <p>
                         <button data-target="#myModal" data-tariff="Интернет-магазин" data-price="100 000 рублей"
@@ -866,9 +866,9 @@
 
                     <p class="none">Наполнение сайта товарами</p>
 
-                    <p><span class="oldprice">155 000 рублей</span></p>
+                    <p><span class="oldprice">60 000 рублей</span></p>
 
-                    <p><span class="price">от 125 000 рублей</span></p>
+                    <p><span class="price">от 50 000 рублей</span></p>
 
                     <p>
                         <button data-target="#myModal" data-price="125 000 рублей" data-tariff="Портал" data-toggle="modal"

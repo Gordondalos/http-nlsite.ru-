@@ -21,8 +21,8 @@ $mail = trim(strip_tags($_POST['email']));
 $phone = trim(strip_tags($_POST['phone']));
 
 
-$to = 'Manager@brand-maker.ru, info@brand-maker.ru';
-$from = 'Manager@brand-maker.ru, info@brand-maker.ru';
+$to = 'info@brand-maker.ru, info@brand-maker.ru';
+$from = 'info@brand-maker.ru, info@brand-maker.ru';
 $subject = "=?utf-8?B?" . base64_encode("Новая заявка на сотрудничество с сайта {$_SERVER['HTTP_HOST']}") . "?=";
 $message = "<p>Получена новая заявка на сотрудничество</p>
 <h1>Данные заказчика:</h1>	
@@ -48,6 +48,11 @@ if(mail($to, $subject, $message, $headers)) {
 
 ?>
 </div>
-</div>              
+</div>
+
+<?php
+header("Refresh: 3;  url=index.php");
+?>
+
 </body>
 </html>

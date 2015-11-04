@@ -12974,7 +12974,7 @@ header {
 .bigInfo,
 .orderForm {
   position: absolute;
-  top: 20px;
+  top: 53px;
 }
 
 .bigInfo {
@@ -13636,6 +13636,10 @@ footer ul li {
 
 .metrika {
   text-align: center;
+}
+
+.section_10 {
+  position: absolute;
 }
 
 .article-section {
