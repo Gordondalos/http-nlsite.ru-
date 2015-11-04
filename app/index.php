@@ -124,14 +124,21 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-md-5 bigInfo">
+                <div class="col-md-5  bigInfo">
                     <h1>Создание сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?></h1>
 
                     <p>Создание интернет-магазинов<br/>(на 1С Битриксе)</p>
 
-                    <div class="presentation"><a
-                            href="http://www.nlsite.ru/files/kp.pdf">cкачать коммерческое предложение</a><span
-                            class="pdf"><img src="img/pdf-icon.png" alt=""></span></div>
+                    <div class="presentation pdf">
+
+                        <a href="files/kp.pdf">
+
+                           <span> cкачать коммерческое предложение </span>
+                            <img class="img" src="img/pdf-icon.png" alt="коммерческое предложение">
+
+                        </a>
+
+                    </div>
                 </div>
             </div>
         </div>

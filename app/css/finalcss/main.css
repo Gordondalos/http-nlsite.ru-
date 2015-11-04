@@ -12964,9 +12964,11 @@ header {
   padding-left: 10px;
 }
 
-.pdf img {
-  width: 24px;
-  height: 24px;
+.pdf .img {
+  display: block;
+  margin: auto;
+  width: 50px;
+  height: 50px;
 }
 
 .bigInfo,
