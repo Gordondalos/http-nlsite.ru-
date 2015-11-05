@@ -135,6 +135,7 @@ gulp.task('js', function(){
         'app/js/angular.min.js',
         'app/js/angular-route.min.js',
         'app/js/article.js',
+        'app/js/jquery-ui.min.js',
 
         'app/js/main.js',
         'app/js/wow.js'
