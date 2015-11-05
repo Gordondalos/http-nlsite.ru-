@@ -3240,6 +3240,16 @@ header {
 #order {
   width: 275px !important; }
 
+.section_2 h2 {
+  text-decoration: none;
+  text-transform: none;
+  color: #fff !important;
+  font-size: 30px; }
+  .section_2 h2:after {
+    display: none; }
+  .section_2 h2:before {
+    display: none; }
+
 .wow {
   text-align: center; }
 

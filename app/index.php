@@ -127,7 +127,7 @@
                 <div class="col-md-5  bigInfo">
                     <h1>Продвижение сайтов <?php echo isset($city['locative']) ? $city['locative'] : "в Москве"; ?></h1>
 
-                    <h1>Создание интернет-магазинов<br/>(на 1С Битриксе)</h1>
+                    <h2>Создание интернет-магазинов<br/>(на 1С Битриксе)</h2>
 
                     <div class="presentation pdf">
 
@@ -720,12 +720,11 @@
                     </li>
 
                     <li class="li-wrap">
-                        <a href="http://eurobetonplus.ru/" target="_blank">
+                        <a href="http://eurobetonplus.ru/" target="_blank" title="Компания ЕвробетонПлюс">
                             <div class="wrap-img">
 
                                 <img src="img/portfolio/eurobetonplus.png"
-                                     alt="Компания ЕвробетонПлюс"
-                                     title="Компания ЕвробетонПлюс"" />
+                                     alt="Компания ЕвробетонПлюс"/>
 
                             </div>
                         </a>
@@ -737,11 +736,10 @@
                 <ul>
 
                     <li class="li-wrap">
-                        <a href="http://www.union.ru/" target="_blank">
+                        <a href="http://www.union.ru/" target="_blank" title="Сайт-каталог Union.ru">
                             <div class="wrap-img">
 
-                                <img src="img/portfolio/union_porte.png" alt="Сайт-каталог Union.ru"
-                                     title="Сайт-каталог Union.ru">
+                                <img src="img/portfolio/union_porte.png" alt="Сайт-каталог Union.ru">
 
                             </div>
                         </a>
@@ -1053,7 +1051,7 @@
         </div>
     </div>
 </section>
-<section class="section_8">
+<section class="section_8" style="display: none">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
