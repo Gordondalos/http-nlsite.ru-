@@ -110,7 +110,7 @@ gulp.task('cascad', function(){
         .pipe(concatCss("main.css"))
       //  .pipe(prefix('last 15 version'))
       //  .pipe(minifyCss())
-      //  .pipe(cssmin())
+        .pipe(cssmin())
         .pipe(gulp.dest('app/css/finalcss/'))
         //.pipe(connect.reload())
         .pipe(notify('done!'));
