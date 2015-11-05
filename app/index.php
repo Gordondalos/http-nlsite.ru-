@@ -188,7 +188,7 @@
                                 <img src="./img/articles/5618012ddb5be.jpeg" alt="Продвижение сайта с помощью статей">
                                 Продвижение сайта с помощью статей</a></li>
                         <li><a href="#tabs-8" title="Продвижение сайта, что такое внутренняя оптимизация">
-                                <img src="./img/articles/vnutrennyaya_optimizaciya.gif"
+                                <img src="./img/articles/vnutrennyaya_optimizaciya.png"
                                      alt="Продвижение сайта, что такое внутренняя оптимизация">
 
                                 Продвижение сайта, что такое внутренняя оптимизация</a></li>
