@@ -1,0 +1,134 @@
+#popupform
+	display: none
+	width: 672px
+	height: 278px
+	background-image: url('../img/girl.png')
+	background-repeat: no-repeat
+	background-position: center center
+	border: 2px solid #3babf5
+	.error
+		color: #c00000
+	h2
+		color: #353535
+		font: 2em/1em 'Trebuchet MS'
+		margin-bottom: 8px
+	.comment
+		color: #717171
+		font: 1.7em 'Trebuchet MS'
+		margin-bottom: 3px
+	label
+		display: block
+		padding: 16px 0 4px
+	.input_text
+		background-color: #fff
+		border: 1px solid #c0c0c0
+		border-radius: 3px
+		color: #555
+		display: block
+		float: left
+		font-size: 12pt
+		height: 35px
+		padding: 5px
+		width: 175px
+	.button
+		background-color: #fff
+		border: 1px solid #ccc
+		border-radius: 3px
+		color: #555
+		cursor: pointer
+		font-size: 14px
+		font-weight: bold
+		height: 34px
+		padding: 2px 16px
+		width: 185px
+		&:hover
+			background-color: #4683ea
+			border: 1px solid #4387fd
+			color: #fff
+
+#popupbutton
+	display: block
+	position: fixed
+	right: 35px
+	bottom: 10px
+	z-index: 100
+	outline: none
+	float: right
+
+#form-feedback
+	display: block
+	margin-top: 50px
+	input
+		margin-left: 25px
+		&:focus
+			outline: none
+		&[type="submit"]
+			height: 36px
+			background-color: #3babf5
+			color: #fff
+			border-radius: 7px
+
+.feedback_text
+	display: block
+	width: 400px
+	height: 100px
+	margin-left: 200px
+	margin-top: 45px
+
+.phone_number
+	display: block
+	float: left
+	height: 35px
+	width: 210px
+	padding: 0px 0px 0px 30px
+	background-color: #fff
+	background-image: url('img/phone_icon.png')
+	background-repeat: no-repeat
+	background-position: 1% 60%
+	border: 1px solid #c0c0c0
+	border-radius: 3px
+	color: #555
+	margin-left: 25px
+	input
+		border: none !important
+		height: 33px !important
+		margin: 0 !important
+
+#bthrow_error_name
+	display: inline
+	margin: 5px 0 0 25px
+	color: red
+
+#bthrow_error_phone
+	display: inline
+	margin: 5px 0 0 200px
+	color: red
+
+.throw_error
+	display: inline
+	margin: 5px 0 0 20px
+	color: red
+	font-weight: bold
+
+/* feedback form animations
+@keyframes brighter-dimmer
+	from
+		opacity: 1
+
+	to
+		opacity: 0.4
+
+
+@keyframes brighter
+	from
+		opacity: 0.6
+
+	to
+		opacity: 1
+
+
+#phoneimg
+	animation: brighter-dimmer 1.2s infinite alternate
+	width: 70px
+	&:hover
+		animation: brighter 1.1s

@@ -110,7 +110,7 @@ gulp.task('cascad', function(){
         .pipe(concatCss("main.css"))
       //  .pipe(prefix('last 15 version'))
       //  .pipe(minifyCss())
-      //  .pipe(cssmin())
+        .pipe(cssmin())
         .pipe(gulp.dest('app/css/finalcss/'))
         //.pipe(connect.reload())
         .pipe(notify('done!'));
@@ -135,6 +135,7 @@ gulp.task('js', function(){
         'app/js/angular.min.js',
         'app/js/angular-route.min.js',
         'app/js/article.js',
+        'app/js/jquery-ui.min.js',
 
         'app/js/main.js',
         'app/js/wow.js'

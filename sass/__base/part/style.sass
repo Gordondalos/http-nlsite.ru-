@@ -1,0 +1,60 @@
+$blue: #39f
+$bgdark: #131F51
+
+body, html
+	width: 100%
+	position: absolute
+	color: $bgdark
+
+.wrap-img
+	img
+		width: 100%
+		height: 100%
+
+section
+	text-align: center
+	margin: 50px 0 0 0
+	display: block
+	::after
+		content: ''
+		display: table
+
+	h2
+		color: #39f
+		text-align: center
+		text-transform: uppercase
+		font-size: 2em
+		margin-top: 50px
+		margin-bottom: 100px
+
+
+
+section h2:before,
+section h2:after
+	content: ""
+	position: relative
+	display: inline-block
+	width: 50%
+	height: 2px
+	vertical-align: bottom
+	background: #000
+	background-clip: content-box
+	border-bottom: 3px solid #39f
+
+section h2:before
+	left: -.5em
+	margin: 0 0 0 -50%
+	width: 40%
+
+
+section h2:after
+	left: .5em
+	margin: 0 -50% 0 0
+	width: 40%
+
+
+section h3
+	text-align: center
+	color: #39f
+	font-size: 1.3em
+	margin-bottom: 35px
