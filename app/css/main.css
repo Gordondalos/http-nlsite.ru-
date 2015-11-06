@@ -3241,12 +3241,13 @@ header {
   width: 275px !important; }
 
 .section_2 h2 {
-  color: #fff;
-  font-size: 30px;
-  text-transform: none; }
-  .section_2 h2::before {
+  text-decoration: none;
+  text-transform: none;
+  color: #fff !important;
+  font-size: 30px; }
+  .section_2 h2:after {
     display: none; }
-  .section_2 h2::after {
+  .section_2 h2:before {
     display: none; }
 
 .wow {
